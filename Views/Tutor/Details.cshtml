@@ -1,0 +1,29 @@
+@model Projeto_PetShop.Models.Tutor
+@{
+    ViewData["Title"] = "Detalhes do Tutor";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg rounded p-4">
+        <h2 class="text-center mb-4 text-primary">Detalhes do Tutor</h2>
+
+        <dl class="row">
+            <dt class="col-sm-3 text-end">Nome do Tutor:</dt>
+            <dd class="col-sm-9">@Model.Nome</dd>
+
+            <dt class="col-sm-3 text-end">Telefone:</dt>
+            <dd class="col-sm-9">@Model.Telefone</dd>
+
+            <dt class="col-sm-3 text-end">Email:</dt>
+            <dd class="col-sm-9">@Model.Email</dd>
+
+            <dt class="col-sm-3 text-end">Endereço:</dt>
+            <dd class="col-sm-9">@Model.Endereco</dd>
+        </dl>
+
+        <div class="text-primary mt-4">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning btn-sm me-2">Editar</a>
+            <a asp-action="Index" class="btn btn-secondary btn-sm">Voltar</a>
+        </div>
+    </div>
+</div>
